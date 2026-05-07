@@ -1,4 +1,4 @@
-# 💡 Arduino LED Blink Project
+# 💡 Arduino LED Project
 
 > Documented with the aid of Claude | Learning Arduino from scratch using Wokwi simulator
 
