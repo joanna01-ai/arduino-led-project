@@ -95,6 +95,10 @@ delay(1000);             // Waits 1 second, then loops back
 ### log2 — [06/05/2026]
 ➡️ Trying to make the LED blink faster. Changed both `delay(1000)` values to `delay(100)`. Now it blinks 10x faster!
 
+## log3 — [07/05/2026]
+➡️ Changed delay from 1000 to 100 — LED now blinks 
+10x faster! Confirmed it works in Wokwi simulator.
+
 ```cpp
 void loop() {
   digitalWrite(13, HIGH);
@@ -123,12 +127,6 @@ void loop() {
 - [ ] Add a button to control the LED
 - [ ] Make the LED fade in and out
 - [ ] Build a traffic light with multiple LEDs
-
----
-
-## log3 — [07/05/2026]
-➡️ Changed delay from 1000 to 100 — LED now blinks 
-10x faster! Confirmed it works in Wokwi simulator.
 
 ```
  void setup() {
