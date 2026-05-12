@@ -76,3 +76,46 @@ void loop() {
 // INPUT_PULLUP means pin starts HIGH by default
 // Button pressed = LOW, Button not pressed = HIGH
 // if/else checks the button state every loop
+
+//================================
+// Arduino LED Fade Project
+// Author: Joanna
+// Date: 12/05/2026
+// Simulator: Wokwi (wokwi.com)
+//================================
+// ----- Components -----
+// - Arduino Uno
+// - 1x Red LED
+// - 1x 220 ohm resistor
+// - 1x Pushbutton
+// - Wires
+
+// ----- Wiring -----
+// Pin 9 → Resistor → LED long leg (+)
+// LED short leg (-) → GND
+// Pin 2 → Left leg of button
+// GND → Right leg of button
+
+void setup() {
+  pinMode(9, OUTPUT);  // LED on pin 9 (PWM pin)
+}
+
+void loop() {
+  // Fade IN
+  for (int i = 0; i <= 255; i++) {
+    analogWrite(9, i);   // brightness goes 0 → 255
+    delay(10);
+  }
+
+  // Fade OUT
+  for (int i = 255; i >= 0; i--) {
+    analogWrite(9, i);   // brightness goes 255 → 0
+    delay(10);
+  }
+}
+
+// ----- Notes -----
+// PWM only works on pins with ~ symbol (3,5,6,9,10,11)
+// analogWrite = dimmer switch (0 = off, 255 = full brightness)
+// for loop counts up and down automatically
+// i++ = add 1, i-- = subtract 1
